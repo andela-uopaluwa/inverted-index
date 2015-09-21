@@ -56,7 +56,7 @@ Index.prototype.createIndex = function (url) {
     		index[element].push(i);
 		});
 	}
-	//attaches index to instance(after thought)
+	//attaches index to instance
 	this.index = index; 
 	return index;
 }
@@ -72,7 +72,6 @@ Index.prototype.searchIndex = function () {
 	var result = [];
 	for(arg in arguments){
 		var word = arguments[arg].toLowerCase();
-		console.log(word);
 		if(this.index[word]){
 			result.push(this.index[word]);
 		}
