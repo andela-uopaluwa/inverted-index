@@ -15,7 +15,7 @@ describe("Populate Index", function() {
   var book = ali.getContent('../books.json');
   it("should create an index from documents passed in ", function() {
   	expect(typeof(index)).toBe('object'); //checks that createIndex returns an object
-  	expect(Object.keys(index)).not.toBe(0); //checks that returned object is not empty(has keys)
+  	expect(Object.keys(index).length).not.toBe(0); //checks that returned object is not empty(has keys)
   	for(word in index){
   		expect((index[word]).length).not.toBe(0); //checks that each value is a non-empty array i.e matches every key/unique word ) 
   	}
